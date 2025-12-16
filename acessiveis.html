@@ -1,0 +1,115 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presentes acessíveis | Casa Nova</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body data-page="acessiveis" data-tier="Presentes acessíveis">
+  <header class="subhero">
+    <div class="subhero__text">
+      <p class="eyebrow">Bloco 3</p>
+      <h1>Presentes acessíveis</h1>
+      <p class="lede">Escolha um item, confirme e o presente ficará reservado em seu nome.</p>
+    </div>
+    <div class="subhero__cta">
+      <a class="ghost-btn" href="index.html">Voltar</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="grid grid--3">
+      <article class="gift-item" data-id="plantas" data-name="Kit plantas internas">
+        <div class="gift-header">
+          <h3>Kit plantas internas</h3>
+        </div>
+        <p>Trio de plantas fáceis de cuidar.</p>
+        <div class="gift-actions">
+          <button class="reserve-btn" data-tier="Presentes acessíveis">Reservar</button>
+        </div>
+      </article>
+
+      <article class="gift-item" data-id="quadros" data-name="Quadros decorativos">
+        <div class="gift-header">
+          <h3>Quadros decorativos</h3>
+        </div>
+        <p>Conjunto de 3 posters minimalistas.</p>
+        <div class="gift-actions">
+          <button class="reserve-btn" data-tier="Presentes acessíveis">Reservar</button>
+        </div>
+      </article>
+
+      <article class="gift-item" data-id="manta" data-name="Manta de sofá">
+        <div class="gift-header">
+          <h3>Manta de sofá</h3>
+        </div>
+        <p>Algodão macio, cor neutra.</p>
+        <div class="gift-actions">
+          <button class="reserve-btn" data-tier="Presentes acessíveis">Reservar</button>
+        </div>
+      </article>
+
+      <article class="gift-item" data-id="tapete" data-name="Tapete para sala">
+        <div class="gift-header">
+          <h3>Tapete para sala</h3>
+        </div>
+        <p>Textura baixa, fácil de limpar.</p>
+        <div class="gift-actions">
+          <button class="reserve-btn" data-tier="Presentes acessíveis">Reservar</button>
+        </div>
+      </article>
+
+      <article class="gift-item" data-id="prateleiras" data-name="Prateleiras flutuantes">
+        <div class="gift-header">
+          <h3>Prateleiras flutuantes</h3>
+        </div>
+        <p>Madeira clara, kit com 3 unidades.</p>
+        <div class="gift-actions">
+          <button class="reserve-btn" data-tier="Presentes acessíveis">Reservar</button>
+        </div>
+      </article>
+
+      <article class="gift-item" data-id="jogo-copos" data-name="Jogo de copos baixinho">
+        <div class="gift-header">
+          <h3>Jogo de copos baixinho</h3>
+        </div>
+        <p>Conjunto 6 unidades para drinks.</p>
+        <div class="gift-actions">
+          <button class="reserve-btn" data-tier="Presentes acessíveis">Reservar</button>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <div class="modal" id="reservationModal" aria-hidden="true">
+    <div class="modal__dialog" role="dialog" aria-modal="true">
+      <header class="modal__header">
+        <h3 id="modalTitle">Reservar presente</h3>
+        <button class="close-btn" data-close>&times;</button>
+      </header>
+      <form id="reservationForm" class="modal__body">
+        <input type="hidden" id="itemId" name="itemId" />
+        <label class="field">
+          <span>Seu nome</span>
+          <input id="guestName" name="guestName" type="text" placeholder="Nome completo" required />
+        </label>
+        <label class="field">
+          <span>Contato (email ou WhatsApp)</span>
+          <input id="guestContact" name="guestContact" type="text" placeholder="Para confirmarmos" required />
+        </label>
+        <label class="field">
+          <span>Mensagem (opcional)</span>
+          <textarea id="guestNote" name="guestNote" rows="2" placeholder="Deixe um recado"></textarea>
+        </label>
+        <div class="modal__footer">
+          <button type="button" class="ghost-btn" data-close>Cancelar</button>
+          <button type="submit" class="primary-btn">Confirmar reserva</button>
+        </div>
+        <p class="helper">A confirmação será registrada e o item ficará marcado como reservado.</p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
