@@ -1,4 +1,4 @@
-﻿const WEBHOOK_URL = ""; // Coloque aqui o endpoint (ex.: Apps Script) para registrar as reservas.
+const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbwb5Vg9wWZkpuKbslSez4Qx_1z-wmelVbty8FtphRu-3ZIcTlfqJsuwVTbbxNyUJMY/exec"; // Endpoint do Apps Script para registrar as reservas.
 
 const state = {
   currentItem: null,
@@ -114,7 +114,7 @@ function attachListeners() {
 
       const res = await sendReservation(payload);
       if (!res.ok && !res.skipped) {
-        alert('Não foi possível registrar online agora, mas vamos marcar localmente.');
+        alert('Nao foi possivel registrar online agora, mas vamos marcar localmente.');
       }
       markReserved(card);
       saveReserved(card);
